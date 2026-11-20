@@ -309,7 +309,7 @@
                     <figure class="tst" style="margin:0">
                         <div class="stars">{{ str_repeat('★', $t->rating) }}</div>
                         <blockquote>{{ $t->quote }}</blockquote>
-                        <figcaption class="who"><span class="av">{{ initials($t->name) }}</span><span><b>{{ $t->name }}</b><small>{{ $t->position }}{{ $t->company ? ' · ' . $t->company : '' }}</small></span></figcaption>
+                        <figcaption class="who"><span class="av">@if($t->photo)<img src="{{ asset($t->photo) }}" alt="{{ $t->name }}">@else{{ initials($t->name) }}@endif</span><span><b>{{ $t->name }}</b><small>{{ $t->position }}{{ $t->company ? ' · ' . $t->company : '' }}</small></span></figcaption>
                     </figure>
                 @endforeach
             </div>

@@ -156,6 +156,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => $user ? $u[$user]->id : null,
                 'department_id' => $depts[$dept]->id,
                 'name' => $name, 'slug' => Str::slug($name), 'designation' => $title,
+                'photo' => 'images/team/' . Str::slug($name) . '.svg',
                 'email' => Str::slug($name, '.') . '@eazytechsolution.com',
                 'phone' => '+880 17' . random_int(10000000, 99999999),
                 'bio' => $bio, 'skills' => $skills, 'employment_type' => $type, 'work_mode' => $mode,
@@ -166,6 +167,9 @@ class DatabaseSeeder extends Seeder
             ]);
         }
         $members['jui']->update(['status' => 'on_leave']);
+        foreach ($u as $user) { // admin logins reuse their team portrait
+            $user->update(['avatar' => 'images/team/' . Str::slug($user->name) . '.svg']);
+        }
 
         return $members;
     }
@@ -256,6 +260,7 @@ class DatabaseSeeder extends Seeder
             $out[] = Client::create([
                 'name' => $name, 'company' => $company, 'industry' => $industry, 'country' => $country,
                 'status' => $status, 'source' => $source,
+                'logo' => 'images/clients/' . Str::slug($company) . '.svg',
                 'email' => Str::slug($name, '.') . '@example.com',
                 'phone' => '+1 555-01' . str_pad((string) ($i + 10), 2, '0'),
                 'website' => 'https://' . Str::slug($company) . '.example.com',
@@ -360,7 +365,7 @@ class DatabaseSeeder extends Seeder
             PortfolioItem::create([
                 'client_id' => $c !== null ? $clients[$c]->id : null,
                 'title' => $title, 'slug' => $slug, 'category' => $cat, 'theme' => $theme, 'summary' => $summary,
-                'description' => $desc, 'tags' => $tags, 'metric_value' => $mv, 'metric_label' => $ml, 'year' => $year,
+                'description' => $desc, 'tags' => $tags, 'cover' => 'images/portfolio/' . $slug . '.svg', 'metric_value' => $mv, 'metric_label' => $ml, 'year' => $year,
                 'is_featured' => $feat, 'is_published' => true, 'sort_order' => $i,
             ]);
         }
@@ -375,7 +380,7 @@ class DatabaseSeeder extends Seeder
             ['Priya Menon', 'Marketing Head', 'Spice Route Foods', 'Their Meta Ads team doubled our online orders in two months. Reports are clear and honest — no vanity metrics.'],
         ];
         foreach ($defs as [$n, $p, $c, $q]) {
-            Testimonial::create(['name' => $n, 'position' => $p, 'company' => $c, 'quote' => $q, 'rating' => 5, 'is_published' => true]);
+            Testimonial::create(['photo' => 'images/team/' . Str::slug($n) . '.svg', 'name' => $n, 'position' => $p, 'company' => $c, 'quote' => $q, 'rating' => 5, 'is_published' => true]);
         }
     }
 
