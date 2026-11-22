@@ -1,0 +1,49 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#f28a2a; font-family:'Archivo Black','Inter',sans-serif; color:#0b1020; }
+    .panel { position:absolute; inset:0; }
+    .big { position:absolute; left:64px; right:64px; text-transform:uppercase; letter-spacing:-.03em; }
+    .big .ln { display:block; }
+    .big b { font-weight:400; }
+    #logo { position:absolute; left:130px; top:150px; width:820px; height:386px; }
+    #logo img { width:100%; height:100%; display:block; }
+    #cta { position:absolute; left:128px; top:648px; padding:26px 38px; background:#0b1020; color:#fff; font-size:38px; letter-spacing:-.01em; text-transform:uppercase; box-shadow:12px 12px 0 #f28a2a; }
+    #web { position:absolute; left:128px; top:830px; font-family:'Inter',sans-serif; font-weight:900; font-size:52px; letter-spacing:-.02em; color:#0b1020; }
+    #web i { font-style:normal; color:#ec5a5e; }
+  </style>
+  <div id="root" data-composition-id="finale" data-width="1080" data-height="1080">
+    <div class="panel" id="fp1" data-layout-allow-overflow style="background:#f28a2a"></div>
+    <div class="panel" id="fp2" data-layout-allow-overflow style="background:#0db5bc"></div>
+    <div class="panel" id="fp3" data-layout-allow-overflow style="background:#ec5a5e"></div>
+    <div class="panel" id="fp4" data-layout-allow-overflow style="background:#ffffff"></div>
+
+    <div class="big clip" id="t1" data-start="0.4" data-duration="0.95" style="top:300px;font-size:260px;line-height:.86;z-index:5">
+      <span class="ln">We</span><span class="ln">plan.</span></div>
+    <div class="big clip" id="t2" data-start="1.45" data-duration="0.8" style="top:300px;font-size:260px;line-height:.86;z-index:5">
+      <span class="ln">We</span><span class="ln">build.</span></div>
+    <div class="big clip" id="t3" data-start="2.4" data-duration="1.45" style="top:250px;font-size:166px;line-height:.9;z-index:5">
+      <span class="ln">We grow</span><span class="ln">your</span><span class="ln"><b style="color:#fff">business.</b></span></div>
+
+    <div id="logo" class="clip" data-start="4.15" data-duration="2.85" style="z-index:6"><img src="assets/logo.png" alt="EazyTech Solution"></div>
+    <div id="cta" class="clip" data-start="4.45" data-duration="2.55" style="z-index:6">Message us for a free quote</div>
+    <div id="web" class="clip" data-start="4.9" data-duration="2.1" style="z-index:6">eazytechsolution<i>.com</i></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.set("#fp2", { y:1080 }, 0);
+    tl.set("#fp3", { x:-1080 }, 0);
+    tl.set("#fp4", { y:-1080 }, 0);
+    tl.fromTo("#fp1", { x:1080 }, { x:0, duration:.45, ease:"power4.out" }, 0);
+    const wipe = (sel, at) => tl.fromTo(sel, { clipPath:"inset(0 100% 0 0)" }, { clipPath:"inset(0 0% 0 0)", duration:.25, ease:"power3.out" }, at);
+    wipe("#t1", .4);
+    tl.to("#fp2", { y:0, duration:.45, ease:"power4.out" }, 1.0);
+    wipe("#t2", 1.45);
+    tl.to("#fp3", { x:0, duration:.45, ease:"power4.out" }, 1.95);
+    wipe("#t3", 2.4);
+    tl.to("#fp4", { y:0, duration:.5, ease:"power4.out" }, 3.8);
+    tl.fromTo("#logo", { clipPath:"inset(100% 0 0 0)", scale:.92, transformOrigin:"50% 60%" }, { clipPath:"inset(0% 0 0 0)", scale:1, duration:.7, ease:"expo.out" }, 4.15);
+    tl.fromTo("#cta", { clipPath:"inset(0 100% 0 0)" }, { clipPath:"inset(0 0% 0 0)", duration:.3, ease:"power3.out" }, 4.45);
+    tl.fromTo("#web", { clipPath:"inset(0 100% 0 0)" }, { clipPath:"inset(0 0% 0 0)", duration:.3, ease:"power3.out" }, 4.9);
+    window.__timelines["finale"] = tl;
+  </script>
+</template>

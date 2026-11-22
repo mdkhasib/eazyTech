@@ -1,0 +1,139 @@
+<template>
+  <style>
+    #root { position:absolute; inset:0; overflow:hidden; background:#f2d624; font-family:'Archivo Black','Inter',sans-serif; color:#0b1020; }
+    .panel { position:absolute; inset:0; }
+    .pc { position:absolute; left:0; top:0; width:410px; height:410px; filter:drop-shadow(11px 13px 0 rgba(11,16,32,.30)); }
+    .pc svg { position:absolute; left:0; top:0; }
+    .prob { position:absolute; left:45px; top:45px; width:320px; height:320px; display:flex; align-items:center; justify-content:center; text-align:center; font-size:37px; line-height:1.05; text-transform:uppercase; }
+    .lab { position:absolute; left:45px; top:273px; width:320px; height:92px; overflow:hidden; }
+    .lab span { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; background:#0b1020; color:#fff; font-size:36px; line-height:1.0; padding:0 12px; }
+    .hd { position:absolute; left:64px; right:64px; top:70px; font-size:100px; line-height:.98; letter-spacing:-.025em; text-transform:uppercase; }
+    .hd.big { font-size:136px; line-height:.93; }
+    .hd .ln { display:block; } .sub { position:absolute; left:64px; right:64px; top:208px; z-index:20; font-family:Inter,sans-serif; font-weight:900; font-size:46px; letter-spacing:-.02em; color:#0b1020; }
+    .hd b { font-weight:400; } .hd b.hl { display:inline-block; line-height:.95; padding:.03em .14em .02em; margin-left:-.14em; }
+  </style>
+  <div id="root" data-composition-id="pieces" data-width="1080" data-height="1080">
+    <div class="panel" id="pw1" data-layout-allow-overflow style="background:#ec5a5e"></div>
+    <div class="panel" id="pw2" data-layout-allow-overflow style="background:#0db5bc"></div>
+
+    <div class="hd big clip" id="h1" data-start="0" data-duration="2.9" style="z-index:20">
+      <span class="ln" id="h1a">Too many</span><span class="ln" id="h1b">loose</span><span class="ln" id="h1c"><b class="hl" style="background:#ec5a5e">pieces?</b></span>
+    </div>
+    <div class="hd clip" id="hA" data-start="3.0" data-duration="3.85" style="z-index:20;font-size:96px">
+      <span class="ln" id="hAa">Sound familiar?</span>
+    </div>
+    <div class="hd clip" id="h2" data-start="6.9" data-duration="1.95" style="z-index:20">
+      <span class="ln" id="h2a">None of it</span><span class="ln" id="h2b">fits <b style="color:#fff">together.</b></span>
+    </div>
+    <div class="hd clip" id="hB" data-start="8.85" data-duration="2.2" style="z-index:20;font-size:84px">
+      <span class="ln" id="hBa">EazyTech Solution</span>
+    </div>
+    <div class="hd clip" id="h3" data-start="11.05" data-duration="10.2" style="z-index:20;font-size:96px">
+      <span class="ln" id="h3a">We make it <b class="hl" style="background:#f2d624">fit.</b></span>
+    </div>
+    <div class="sub clip" id="s1" data-start="11.95" data-duration="2.4"><span style="display:inline-block">Websites that bring enquiries</span></div>
+    <div class="sub clip" id="s2" data-start="14.35" data-duration="2.35"><span>Stores that sell all day</span></div>
+    <div class="sub clip" id="s3" data-start="16.7" data-duration="2.35"><span>Ads that bring real buyers</span></div>
+    <div class="sub clip" id="s4" data-start="19.05" data-duration="2.2"><span>Software that runs it all</span></div>
+    
+    <div class="pc" id="pcA" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+      <svg width="410" height="410" viewBox="0 0 410 410">
+        <defs><clipPath id="clipA"><path d="M 45 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 45 Z"/></clipPath></defs>
+        <path d="M 45 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 45 Z" fill="#f28a2a"/>
+        <g clip-path="url(#clipA)"><image class="img" href="assets/real-estate-portal.svg" x="0" y="0" width="410" height="410" preserveAspectRatio="xMidYMid slice" opacity="0"/></g>
+        <g clip-path="url(#clipA)"><path class="edge" d="M 45 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 45 Z" fill="none" stroke="#ffffff" stroke-width="18" stroke-linejoin="round" opacity="0"/></g>
+        <path d="M 45 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 45 Z" fill="none" stroke="#0b1020" stroke-width="7" stroke-linejoin="round"/>
+      </svg>
+      <div class="prob" style="padding:24px 24px 24px 24px"><span>NO WEBSITE</span></div>
+      <div class="lab" data-layout-ignore data-layout-allow-occlusion data-layout-allow-overflow><span data-layout-ignore>WEBSITE &amp; APPS</span></div>
+    </div>
+    <div class="pc" id="pcB" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+      <svg width="410" height="410" viewBox="0 0 410 410">
+        <defs><clipPath id="clipB"><path d="M 45 45 L 365 45 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z"/></clipPath></defs>
+        <path d="M 45 45 L 365 45 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z" fill="#0db5bc"/>
+        <g clip-path="url(#clipB)"><image class="img" href="assets/fashion-ecommerce.svg" x="0" y="0" width="410" height="410" preserveAspectRatio="xMidYMid slice" opacity="0"/></g>
+        <g clip-path="url(#clipB)"><path class="edge" d="M 45 45 L 365 45 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z" fill="none" stroke="#ffffff" stroke-width="18" stroke-linejoin="round" opacity="0"/></g>
+        <path d="M 45 45 L 365 45 L 365 365 L 253.0 365 A 51.2 51.2 0 1 1 157.0 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z" fill="none" stroke="#0b1020" stroke-width="7" stroke-linejoin="round"/>
+      </svg>
+      <div class="prob" style="padding:24px 24px 24px 76px"><span>ORDERS IN A NOTEBOOK</span></div>
+      <div class="lab" data-layout-ignore data-layout-allow-occlusion data-layout-allow-overflow><span data-layout-ignore>ONLINE STORE</span></div>
+    </div>
+    <div class="pc" id="pcC" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+      <svg width="410" height="410" viewBox="0 0 410 410">
+        <defs><clipPath id="clipC"><path d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 45 365 L 45 45 Z"/></clipPath></defs>
+        <path d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 45 365 L 45 45 Z" fill="#ffffff"/>
+        <g clip-path="url(#clipC)"><image class="img" href="assets/food-brand-meta-ads.svg" x="0" y="0" width="410" height="410" preserveAspectRatio="xMidYMid slice" opacity="0"/></g>
+        <g clip-path="url(#clipC)"><path class="edge" d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 45 365 L 45 45 Z" fill="none" stroke="#ffffff" stroke-width="18" stroke-linejoin="round" opacity="0"/></g>
+        <path d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 157.0 A 51.2 51.2 0 1 1 365 253.0 L 365 365 L 45 365 L 45 45 Z" fill="none" stroke="#0b1020" stroke-width="7" stroke-linejoin="round"/>
+      </svg>
+      <div class="prob" style="padding:76px 24px 24px 24px"><span>ADS THAT DON&rsquo;T SELL</span></div>
+      <div class="lab" data-layout-ignore data-layout-allow-occlusion data-layout-allow-overflow><span data-layout-ignore>META ADS</span></div>
+    </div>
+    <div class="pc" id="pcD" data-layout-allow-overflow data-layout-allow-occlusion data-layout-allow-overlap>
+      <svg width="410" height="410" viewBox="0 0 410 410">
+        <defs><clipPath id="clipD"><path d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z"/></clipPath></defs>
+        <path d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z" fill="#f2d624"/>
+        <g clip-path="url(#clipD)"><image class="img" href="assets/retail-pos-inventory.svg" x="0" y="0" width="410" height="410" preserveAspectRatio="xMidYMid slice" opacity="0"/></g>
+        <g clip-path="url(#clipD)"><path class="edge" d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z" fill="none" stroke="#ffffff" stroke-width="18" stroke-linejoin="round" opacity="0"/></g>
+        <path d="M 45 45 L 157.0 45 A 51.2 51.2 0 1 0 253.0 45 L 365 45 L 365 365 L 45 365 L 45 253.0 A 51.2 51.2 0 1 0 45 157.0 L 45 45 Z" fill="none" stroke="#0b1020" stroke-width="7" stroke-linejoin="round"/>
+      </svg>
+      <div class="prob" style="padding:76px 24px 24px 76px"><span>EXCEL EVERYWHERE</span></div>
+      <div class="lab" data-layout-ignore data-layout-allow-occlusion data-layout-allow-overflow><span data-layout-ignore>BUSINESS SOFTWARE</span></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const ids = ["A","B","C","D"];
+    const mess = { A:[165,705,-12], B:[425,835,8], C:[690,695,14], D:[925,830,-9] };
+    const fit  = { A:[380,460], B:[700,460], C:[380,780], D:[700,780] };
+    const H = 410/2;
+    const slam = (sel, at) => tl.fromTo(sel, { opacity:0, scale:1.28, transformOrigin:"0% 50%" }, { opacity:1, scale:1, duration:.22, ease:"power4.out" }, at);
+    ids.forEach((k, i) => {
+      const [x,y,r] = mess[k];
+      tl.set("#pc"+k, { x:x-H, y:y-H-520, rotation:r-40+i*10, scale:.8, zIndex:10+i }, 0);
+      tl.to("#pc"+k, { y:y-H, rotation:r, duration:.55, ease:"bounce.out" }, 0.05 + i*.17);
+    });
+    tl.set(".lab span", { yPercent:100 }, 0);
+    tl.set("#pw1", { x:1080 }, 0);
+    tl.set("#pw2", { y:1080 }, 0);
+
+    // 0-2.9 hook
+    slam("#h1b", .12); slam("#h1c", .28);
+
+    // 2.8 coral ground, "Sound familiar?", pieces light up as the voice names each problem
+    tl.to("#pw1", { x:0, duration:.45, ease:"power4.out" }, 2.8);
+    slam("#hAa", 3.0);
+    const pulse = (k, at) => { tl.to("#pc"+k, { scale:.94, duration:.14, yoyo:true, repeat:1, ease:"power2.out" }, at);
+                               tl.to("#pc"+k, { rotation:"+=6", duration:.1, yoyo:true, repeat:3, ease:"sine.inOut" }, at); };
+    pulse("B", 3.2); pulse("D", 4.65); pulse("C", 5.8);
+    // 6.9 "None of it fits together": two failed joins
+    slam("#h2a", 6.9); slam("#h2b", 7.1);
+    tl.set("#pcA", { zIndex:30 }, 7.0);
+    tl.to("#pcA", { x:310-H, y:775-H, rotation:0, duration:.35, ease:"power2.in" }, 7.0);
+    tl.to("#pcB", { x:"+=22", duration:.08, yoyo:true, repeat:1, ease:"power1.out" }, 7.35);
+    tl.to("#pcA", { x:mess.A[0]-H, y:mess.A[1]-H, rotation:mess.A[2], duration:.8, ease:"elastic.out(1,0.35)" }, 7.35);
+    tl.set("#pcC", { zIndex:30 }, 7.7);
+    tl.to("#pcC", { x:820-H, y:790-H, rotation:90, duration:.35, ease:"power2.in" }, 7.7);
+    tl.to("#pcD", { x:"+=24", duration:.08, yoyo:true, repeat:1, ease:"power1.out" }, 8.05);
+    tl.to("#pcC", { x:mess.C[0]-H, y:mess.C[1]-H, rotation:mess.C[2], duration:.7, ease:"elastic.out(1,0.35)" }, 8.05);
+
+    // 8.6 teal ground, brand name, then "We make it fit" and the four snaps, one per voice line
+    tl.to("#pw2", { y:0, duration:.45, ease:"power4.out" }, 8.6);
+    slam("#hBa", 8.85);
+    slam("#h3a", 11.05);
+    const starts = [11.15, 13.55, 15.9, 18.25];
+    ids.forEach((k, i) => {
+      const ts = starts[i], te = ts + .8;
+      tl.set("#pc"+k, { zIndex:40+i }, ts);
+      tl.to("#pc"+k, { x:fit[k][0]-H, y:fit[k][1]-H, rotation:0, scale:1, duration:.8, ease:"power3.in" }, ts);
+      tl.fromTo("#pc"+k, { scale:1.08 }, { scale:1, duration:.2, ease:"power2.out", immediateRender:false }, te);
+      tl.to("#pc"+k+" .prob", { opacity:0, duration:.12 }, te - .05);
+      tl.to("#pc"+k+" .img", { opacity:1, duration:.22 }, te);
+      tl.to("#pc"+k+" .edge", { opacity:1, duration:.22 }, te);
+      tl.fromTo("#pc"+k+" .lab span", { yPercent:100 }, { yPercent:0, duration:.3, ease:"expo.out", immediateRender:false }, te + .06);
+      tl.fromTo("#s"+(i+1)+" span", { clipPath:"inset(0 100% 0 0)" }, { clipPath:"inset(0 0% 0 0)", duration:.3, ease:"power3.out" }, te);
+    });
+    tl.to(["#pcA","#pcB","#pcC","#pcD"], { scale:1.04, duration:.14, yoyo:true, repeat:1, ease:"power2.out" }, 19.15);
+    window.__timelines["pieces"] = tl;
+  </script>
+</template>
